@@ -1,0 +1,7 @@
+<div *ngFor="let operator of operators; let idx = index">
+    <div *ngIf="idx % 2 == 0">
+      <span *ngFor="let i of [0,1]">
+        <button class="col" *ngIf="(idx + i) < operators.length" (click)="send(operators[idx+i])">{{operators[idx+i]}}</button>
+      </span>
+    </div>
+  </div>

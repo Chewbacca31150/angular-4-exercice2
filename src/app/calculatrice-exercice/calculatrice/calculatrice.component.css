@@ -1,0 +1,10 @@
+.float-left {
+    float:left;
+    display: block;
+    margin-right: 20px;
+}
+
+.clear {
+    clear:both;
+    margin-top:5px;
+}

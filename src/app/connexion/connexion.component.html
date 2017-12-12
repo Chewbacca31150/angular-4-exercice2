@@ -1,0 +1,9 @@
+<form #f="ngForm" [formGroup]="form" (ngSubmit)="onSubmit(f)">
+  <input type="text" placeholder="Enter Name" formControlName="username" />
+  <div *ngIf="form.controls.username.errors && form.controls.username.touched">
+    <div *ngIf="form.controls.username.errors.required">
+      Le nom est obligatoire
+    </div>
+  </div>
+  <button type="submit" [disabled]="!form.valid">Validate</button>
+</form>

@@ -1,0 +1,11 @@
+<div><input disabled value="{{result}}" /></div>
+<div>
+<app-chiffre class="float-left" [numbers]="numbers" (sendNumber)="onMessageReceived($event)"></app-chiffre>
+<app-operateur [operators]="operators" (sendOperator)="onMessageReceived($event)"></app-operateur>
+</div>
+
+<div class="float-left clear">
+    <button (click)="createPoint()">.</button>
+    <button (click)="reset()">C</button>
+    <button (click)="doCalcul()">=</button>
+</div>

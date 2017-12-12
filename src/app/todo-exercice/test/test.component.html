@@ -1,0 +1,7 @@
+<app-add-todo (change)="onChildChange($event)"></app-add-todo>
+<div *ngIf="tasks.length != 0">
+  <div *ngFor="let task of tasks; let i = index" [ngClass]="{'color-red':i%2==0, 'color-blue':i%2==1}">
+    <app-todo (sendAnEvent)="onTodoChange($event, i, task)" [task]="{task:task, index:i}"></app-todo>
+  </div>
+</div>
+<p *ngIf="tasks.length==0">Tasks not set</p>

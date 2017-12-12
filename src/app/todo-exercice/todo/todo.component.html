@@ -1,0 +1,6 @@
+<span *ngIf="!task.task.edit">{{task.task.name}}</span>
+<span div *ngIf="task.task.edit">
+  <input md-input placeholder="edit" [(ngModel)]="task.task.name" /><button md-button (click)="sendEvent('update')">Update</button>
+</span>
+<button md-button (click)="edit()">Edit</button>
+<button md-button (click)="sendEvent('remove')">Remove</button>
